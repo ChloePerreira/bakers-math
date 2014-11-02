@@ -1,0 +1,4 @@
+<% @recipes.each do |recipe| %>
+  <%= link_to recipe.title, show_recipe_path(recipe.id) %>
+  <br>
+<% end %>

@@ -1,0 +1,21 @@
+Welcome <%= @user.email %>
+<br>
+<%= link_to 'log out', destroy_session_path, method: :delete %>
+<br>
+<%= link_to 'add a recipe', new_recipe_path %>
+<br>
+<%= link_to 'public recipes', public_recipes_path %>
+<br>
+Recipes
+<br>
+<% @recipes.each do |recipe| %>
+  <%= link_to recipe.title, show_recipe_path(recipe.id) %>
+  <% if recipe.public %>
+    <%= 'public' %>
+  <% else %>
+    <%= 'private' %>
+  <% end %>
+  <%= link_to 'delete', destroy_recipe_path(recipe.id), method: :delete %>
+  <%= link_to 'edit', edit_recipe_path(recipe.id) %> 
+  <br>
+<% end %>
