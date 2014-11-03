@@ -1,10 +1,11 @@
 <!-- How do I do this as a form_for? -->
-
-<form action = 'new' method = 'POST'>
-  <label for='user_email'>email:</label>
-  <input placeholder='Email address' type='string' name='user[email]'/>
-  <label for='user_password'>password:</label>
-  <input placeholder='Password' type='password' name='user[password]'/>
-  <input type='submit' value='sign in' class='submit'/>
-</form>
+<div class = 'container'>
+  <form action = 'new' method = 'POST' url= 'sessions/new'>
+    <label for='user_email'>email:</label>
+    <input placeholder='Email address' type='string' name='user[email]'/>
+    <label for='user_password'>password:</label>
+    <input placeholder='Password' type='password' name='user[password]'/>
+    <input type='submit' value='sign in' class='submit'/>
+  </form>
+</div>
   

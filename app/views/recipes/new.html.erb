@@ -1,6 +1,9 @@
-<%= form_for(@recipe, url:create_recipe_path) do |f| %>
-  <%= f.hidden_field :user_id, :value => session[:user_id] %>
-  Title: <%= f.text_field :title %>
-  Public: <%= f.check_box :public %>
-  <%= f.submit %>
-<% end %>
+<div class= 'form-inline'>
+  <%= form_for(@recipe, url:create_recipe_path) do |f| %>
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+    title <%= f.text_field :title %>
+    image <%= f.text_field :image %>
+    public <%= f.check_box :public %>
+    <%= f.submit %>
+  <% end %>
+</div>
